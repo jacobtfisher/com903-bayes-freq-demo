@@ -1,0 +1,11 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+/.quarto/
+/*_files/
+*_cache/
+dev/
+.claude/settings.local.json
+.claude/launch.json

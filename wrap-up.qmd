@@ -1,0 +1,13 @@
+---
+title: "Wrap-up"
+---
+
+| | Frequentist | Bayesian |
+|---|---|---|
+| **Returns** | compatibility of data with a model (*p*, CI) | posterior over parameters; Bayes factor between models |
+| **Lets you say** | "compatible with effects from A to B"; "rejects values outside" | "P(δ > 0) = …"; "the data favor theory 1 over theory 2 by k" |
+| **Needs from you** | a planned procedure; a SESOI for null claims; exact *p* and intervals | a prior you can defend in print; a sensitivity analysis |
+| **Earns its keep in theory building when** | you need long-run error control, falsification of values, equivalence tests | you compare specific theories, support boundary nulls, accumulate studies, model heterogeneity |
+| **Cannot fix** | confounding, bad measurement, the wrong estimand | confounding, bad measurement, the wrong estimand |
+
+The frameworks disagree least about the estimate and most about what you may say. The design decides what either one can mean.

@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Scene 2 · Priors as theories – One Story, Two Inference Machines</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./scene-3.html" rel="next">
+<link href="./scene-1.html" rel="prev">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f131de9aa1b8104d26dcf3e9d08923a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scene-2.html">Scene 2 · Priors as theories</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">One Story, Two Inference Machines</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Start here</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 1 · Same data, two questions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Scene 2 · Priors as theories</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 3 · When a theory predicts nothing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 4 · Six labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 5 · Neither machine fixes the design</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 6 · What each framework promises</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wrap-up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wrap-up</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#how-much-does-the-prior-width-matter" id="toc-how-much-does-the-prior-width-matter" class="nav-link active" data-scroll-target="#how-much-does-the-prior-width-matter">How much does the prior width matter?</a></li>
+  <li><a href="#the-frequentist-counterpart-test-the-theorys-value-not-only-zero" id="toc-the-frequentist-counterpart-test-the-theorys-value-not-only-zero" class="nav-link" data-scroll-target="#the-frequentist-counterpart-test-the-theorys-value-not-only-zero">The frequentist counterpart: test the theory’s value, not only zero</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Scene 2 · Priors as theories</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<p class="subtitle lead">A Bayes factor is a prediction contest</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>So far ADT has made one directional prediction: more enjoyment after the rewarded ending. Theory building usually means weighing rival explanations of the same result, so here are two rivals. To compare the three, each account now states how big δ should be. All three are stylized (simplified for this demo, not summaries of a literature):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Account</th>
+<th>Mechanism</th>
+<th>Prediction for δ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ADT</strong></td>
+<td>Viewers like the character who did good, so they enjoy seeing that character rewarded more than punished.</td>
+<td>small and positive (around 0.3)</td>
+</tr>
+<tr class="even">
+<td><strong>Craft</strong></td>
+<td>Enjoyment comes from how well the story is told, not from how it ends.</td>
+<td>zero</td>
+</tr>
+<tr class="odd">
+<td><strong>Tragedy</strong></td>
+<td>Watching a good person suffer is moving, and moving stories are enjoyed more.</td>
+<td>small and negative (around −0.3)</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled" title="Predict first">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each account above makes a prediction about δ. Using the n = 50 data (observed <em>d</em> = 0.39), which account wins, and by roughly how much?</p>
+</div>
+</div>
+<p>A theory that predicts “δ is around 0.3” can be written as a <strong>prior on δ</strong>. That prior implies which <em>t</em> statistics the study should produce. The Bayes factor is the ratio of how well two hypotheses predicted the <em>t</em> value we actually observed (Rouder et al., 2009; Gronau et al., 2020). Treating priors as part of the theory is the core of Vanpaemel’s (2010) defense of Bayes factors for theory testing.</p>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Load the Study 1 data</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>s1_50  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/story_n50.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>s1_150 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/story_n150.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>s50  <span class="ot">&lt;-</span> <span class="fu">two_group</span>(s1_50)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>s150 <span class="ot">&lt;-</span> <span class="fu">two_group</span>(s1_150)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hyps <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Craft (δ = 0)"</span> <span class="ot">=</span> <span class="st">"null"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ADT: Normal(0.3, 0.15)"</span> <span class="ot">=</span> prior_adt,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Tragedy: Normal(−0.3, 0.15)"</span> <span class="ot">=</span> prior_tragedy,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"JASP default: Cauchy(0, 0.707)"</span> <span class="ot">=</span> prior_default</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Craft (δ = 0)"</span> <span class="ot">=</span> pal[[<span class="st">"gray"</span>]],</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"ADT: Normal(0.3, 0.15)"</span> <span class="ot">=</span> pal[[<span class="st">"blue"</span>]],</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Tragedy: Normal(−0.3, 0.15)"</span> <span class="ot">=</span> pal[[<span class="st">"orange"</span>]],</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"JASP default: Cauchy(0, 0.707)"</span> <span class="ot">=</span> pal[[<span class="st">"aqua"</span>]])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>short <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Craft"</span>, <span class="st">"ADT"</span>, <span class="st">"Tragedy"</span>, <span class="st">"Default"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dl <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>pri <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">names</span>(hyps)[<span class="sc">-</span><span class="dv">1</span>], <span class="cf">function</span>(h) <span class="fu">data.frame</span>(<span class="at">x =</span> dl, <span class="at">y =</span> hyps[[h]](dl), <span class="at">h =</span> h)))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>pri_lab <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">0.78</span>, <span class="sc">-</span><span class="fl">0.78</span>, <span class="fl">1.15</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">2.2</span>, <span class="fl">2.2</span>, <span class="fl">0.28</span>), <span class="at">h =</span> <span class="fu">names</span>(hyps)[<span class="sc">-</span><span class="dv">1</span>],</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                      <span class="at">lab =</span> short[<span class="sc">-</span><span class="dv">1</span>])</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>pA <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pri, <span class="fu">aes</span>(x, y, <span class="at">color =</span> h)) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="fl">3.1</span>), <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linewidth =</span> <span class="fl">1.3</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.25</span>, <span class="st">"cm"</span>)), <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fl">3.38</span>, <span class="at">label =</span> <span class="st">"Craft"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">4.3</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]], <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> pri_lab, <span class="fu">aes</span>(<span class="at">label =</span> lab), <span class="at">size =</span> <span class="fl">4.3</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> cols) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">3.5</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.4</span>, <span class="fl">1.4</span>)) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Standardized effect δ"</span>, <span class="at">y =</span> <span class="st">"Prior density"</span>, <span class="at">title =</span> <span class="st">"What each account predicts about δ"</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>tg <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">8</span>, <span class="at">by =</span> <span class="fl">0.05</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">list</span>(<span class="fu">list</span>(s50, <span class="st">"n = 50 per group"</span>), <span class="fu">list</span>(s150, <span class="st">"n = 150 per group"</span>)), <span class="cf">function</span>(z) {</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">names</span>(hyps), <span class="cf">function</span>(h) <span class="fu">data.frame</span>(<span class="at">t =</span> tg, <span class="at">y =</span> <span class="fu">pred_t</span>(tg, z[[<span class="dv">1</span>]], hyps[[h]]), <span class="at">h =</span> h, <span class="at">n =</span> z[[<span class="dv">2</span>]])))</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>pred<span class="sc">$</span>n <span class="ot">&lt;-</span> <span class="fu">factor</span>(pred<span class="sc">$</span>n, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"n = 50 per group"</span>, <span class="st">"n = 150 per group"</span>))</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">n =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"n = 50 per group"</span>, <span class="st">"n = 150 per group"</span>), <span class="at">levels =</span> <span class="fu">levels</span>(pred<span class="sc">$</span>n)),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t =</span> <span class="fu">c</span>(s50<span class="sc">$</span>t, s150<span class="sc">$</span>t))</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>pk <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">levels</span>(pred<span class="sc">$</span>n), <span class="at">each =</span> <span class="dv">4</span>), <span class="at">levels =</span> <span class="fu">levels</span>(pred<span class="sc">$</span>n)),</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">h =</span> <span class="fu">rep</span>(<span class="fu">names</span>(hyps), <span class="dv">2</span>), <span class="at">lab =</span> <span class="fu">rep</span>(short, <span class="dv">2</span>),</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">t =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.6</span>, <span class="fl">4.7</span>, <span class="sc">-</span><span class="fl">3.9</span>, <span class="fl">5.6</span>,  <span class="sc">-</span><span class="fl">1.6</span>, <span class="fl">5.9</span>, <span class="sc">-</span><span class="fl">4.4</span>, <span class="fl">6.1</span>),</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.415</span>, <span class="fl">0.25</span>, <span class="fl">0.3</span>, <span class="fl">0.1</span>, <span class="fl">0.415</span>, <span class="fl">0.2</span>, <span class="fl">0.26</span>, <span class="fl">0.085</span>))</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>pB <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pred, <span class="fu">aes</span>(t, y, <span class="at">color =</span> h)) <span class="sc">+</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">data =</span> obs, <span class="fu">aes</span>(<span class="at">xintercept =</span> t), <span class="at">linewidth =</span> <span class="fl">0.9</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> obs, <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> <span class="fl">0.49</span>, <span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"observed t = %.2f"</span>, t)),</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">size =</span> <span class="fl">4.2</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]], <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> pk, <span class="fu">aes</span>(<span class="at">label =</span> lab), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">vjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>n) <span class="sc">+</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> cols) <span class="sc">+</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.51</span>)) <span class="sc">+</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"t statistic"</span>, <span class="at">y =</span> <span class="st">"Predicted density"</span>, <span class="at">title =</span> <span class="st">"What each account predicts about the t statistic"</span>) <span class="sc">+</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>pA <span class="sc">/</span> pB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-predict" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-predict-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="scene-2_files/figure-html/fig-predict-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="990">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-predict-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Top: each account’s prior on δ (the craft account is a spike at zero). Bottom: the t statistics each account predicts. The dotted vertical line is the observed t. The Bayes factor between two accounts is the ratio of their curve heights at that line.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled" title="How to read this figure">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to read this figure
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Top panel:</strong> each account’s prior on δ, its prediction about the true effect before seeing data. Normal(0.3, 0.15) means “centered at 0.3, with 95% of its weight between 0 and 0.6.” The craft account puts all its weight on exactly zero (the arrow).</li>
+<li><strong>Bottom panels:</strong> what each account predicts the study’s <em>t</em> statistic will be. Imagine running the study thousands of times with true effects drawn from the account’s prior, and recording each <em>t</em>. The curve is the distribution of those <em>t</em> values (the <em>prior predictive distribution</em>).</li>
+<li><strong>The dotted vertical line</strong> is the <em>t</em> we actually observed.</li>
+<li><strong>The Bayes factor between any two accounts is the ratio of their curves’ heights at that line.</strong> At n = 50, the blue (ADT) curve is about five times higher than the gray (craft) curve there.</li>
+<li><strong>Compare the two panels.</strong> The craft prediction does not change with sample size, but the other accounts’ predictions move away from zero as <em>n</em> grows, because the same true effect produces larger <em>t</em> values in larger samples. Bigger studies make theories easier to tell apart.</li>
+</ol>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bf_table <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">list</span>(<span class="st">`</span><span class="at">n = 50</span><span class="st">`</span> <span class="ot">=</span> s50, <span class="st">`</span><span class="at">n = 150</span><span class="st">`</span> <span class="ot">=</span> s150), <span class="cf">function</span>(s)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sapply</span>(hyps[<span class="sc">-</span><span class="dv">1</span>], <span class="cf">function</span>(pr) <span class="fu">bf_vs_null</span>(s, pr)))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(bf_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ADT vs. null"</span>, <span class="st">"Tragedy vs. null"</span>, <span class="st">"Default vs. null"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(bf_table,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ADT vs. tragedy"</span> <span class="ot">=</span> bf_table[<span class="dv">1</span>, ] <span class="sc">/</span> bf_table[<span class="dv">2</span>, ],</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ADT vs. default"</span> <span class="ot">=</span> bf_table[<span class="dv">1</span>, ] <span class="sc">/</span> bf_table[<span class="dv">3</span>, ]), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 n = 50 n = 150
+ADT vs. null       4.90  307.31
+Tragedy vs. null   0.12    0.30
+Default vs. null   1.12   59.18
+ADT vs. tragedy   40.74 1032.84
+ADT vs. default    4.36    5.19</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check our prediction-contest function against BayesFactor (the engine JASP uses)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">ours =</span> <span class="fu">bf_vs_null</span>(s50, prior_default),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">BayesFactor =</span> <span class="fu">extractBF</span>(<span class="fu">bf_default</span>(s1_50))<span class="sc">$</span>bf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ours BayesFactor 
+   1.123621    1.123621 </code></pre>
+</div>
+</div>
+<p>Read the table as a contest against the craft account, which predicts δ = 0 (the null):</p>
+<ul>
+<li>At <em>n</em> = 50, <strong>ADT beats the null by about 5 to 1</strong>, while the vague default alternative barely ties it (1.12). Same data, different verdicts, because the hypotheses made different predictions.</li>
+<li><strong>Tragedy loses badly</strong> (BF₁₀ ≈ 0.12): it predicted negative <em>t</em> values and the data came out positive. At <em>n</em> = 150 it looks slightly <em>less</em> bad against the null (0.30), only because the null is now failing too. Bayes factors are relative: they say which of two hypotheses predicted better, not whether either one is any good. At <em>n</em> = 150, tragedy loses to ADT by more than 1,000 to 1.</li>
+<li>At <em>n</em> = 150, ADT is favored over the null by about 310 to 1, and over the default by about 5.2 to 1.</li>
+</ul>
+<p>A precise theory sticks its neck out. When it is right, it earns more evidence than a vague one; when it is wrong, it loses more. Meehl (1967) argued that a theory earns corroboration only by making predictions precise enough to fail; the Bayes factor puts a number on that idea.</p>
+<section id="how-much-does-the-prior-width-matter" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-does-the-prior-width-matter">How much does the prior width matter?</h2>
+<p>This recreates JASP’s robustness check: the default hypothesis with Cauchy widths from 0.05 to 1.5.</p>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.05</span>, <span class="fl">1.5</span>, <span class="at">by =</span> <span class="fl">0.025</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rob <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">data.frame</span>(r, <span class="at">bf =</span> <span class="fu">sapply</span>(r, <span class="cf">function</span>(w) <span class="fu">bf_vs_null</span>(s50,  <span class="cf">function</span>(x) <span class="fu">dcauchy</span>(x, <span class="dv">0</span>, w))), <span class="at">n =</span> <span class="st">"n = 50 per group"</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>             <span class="fu">data.frame</span>(r, <span class="at">bf =</span> <span class="fu">sapply</span>(r, <span class="cf">function</span>(w) <span class="fu">bf_vs_null</span>(s150, <span class="cf">function</span>(x) <span class="fu">dcauchy</span>(x, <span class="dv">0</span>, w))), <span class="at">n =</span> <span class="st">"n = 150 per group"</span>))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>rl <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">split</span>(rob, rob<span class="sc">$</span>n), <span class="cf">function</span>(z) z[z<span class="sc">$</span>r <span class="sc">==</span> <span class="fl">1.5</span>, ]))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(rob, <span class="fu">aes</span>(r, bf, <span class="at">color =</span> n)) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>), <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linetype =</span> <span class="fu">c</span>(<span class="st">"solid"</span>, <span class="st">"dashed"</span>, <span class="st">"dashed"</span>), <span class="at">linewidth =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">/</span> <span class="dv">2</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> rl, <span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.8</span>, <span class="at">size =</span> <span class="fl">4.4</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.72</span>, <span class="at">y =</span> <span class="dv">150</span>, <span class="at">label =</span> <span class="st">"JASP default (0.707)"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">100</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">200</span>)) <span class="sc">+</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"n = 50 per group"</span> <span class="ot">=</span> pal[[<span class="st">"blue"</span>]], <span class="st">"n = 150 per group"</span> <span class="ot">=</span> pal[[<span class="st">"aqua"</span>]])) <span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Cauchy prior width r"</span>, <span class="at">y =</span> <span class="st">"BF10 (log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-robust" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="scene-2_files/figure-html/fig-robust-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="990">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-robust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Bayes factor for a Cauchy alternative as its width changes. Wider priors predict larger effects and are penalized when the observed effect is small.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled" title="How to read this figure">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to read this figure
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Horizontal axis:</strong> the width (scale) of the default Cauchy prior. Small widths say “expect small effects”; large widths say “expect large ones.”</li>
+<li><strong>Vertical axis:</strong> BF₁₀ on a log scale. The solid line at 1 means no preference; the dashed lines at 3 and 10 mark JASP’s “moderate” and “strong” labels.</li>
+<li><strong>The dotted vertical line</strong> is JASP’s default width (0.707).</li>
+<li><strong>A flat curve</strong> means the conclusion does not depend on the prior’s width; <strong>a sloped curve</strong> means it does.</li>
+</ol>
+</div>
+</div>
+<p>At <em>n</em> = 50 every width gives weak evidence at best, and wide priors tip toward the null. At <em>n</em> = 150 every reasonable width favors an effect. <strong>A prior sensitivity analysis is how you show readers which conclusions depend on your theory’s specifics and which do not.</strong></p>
+</section>
+<section id="the-frequentist-counterpart-test-the-theorys-value-not-only-zero" class="level2">
+<h2 class="anchored" data-anchor-id="the-frequentist-counterpart-test-the-theorys-value-not-only-zero">The frequentist counterpart: test the theory’s value, not only zero</h2>
+<p>A <em>p</em> value can test any hypothesized value, not only zero (Greenland et al., 2016). Testing each account’s central prediction:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>p_delta <span class="ot">&lt;-</span> <span class="cf">function</span>(s, d0) { <span class="co"># exact test of H0: delta = d0 via the noncentral t</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  lo <span class="ot">&lt;-</span> <span class="fu">pt</span>(s<span class="sc">$</span>t, s<span class="sc">$</span>df, <span class="at">ncp =</span> d0 <span class="sc">*</span> <span class="fu">sqrt</span>(s<span class="sc">$</span>neff)); <span class="dv">2</span> <span class="sc">*</span> <span class="fu">min</span>(lo, <span class="dv">1</span> <span class="sc">-</span> lo)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">c</span>(<span class="st">`</span><span class="at">Tragedy (delta = -0.3)</span><span class="st">`</span> <span class="ot">=</span> <span class="sc">-</span><span class="fl">0.3</span>, <span class="st">`</span><span class="at">Craft (delta = 0)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">`</span><span class="at">ADT (delta = 0.3)</span><span class="st">`</span> <span class="ot">=</span> <span class="fl">0.3</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>       <span class="cf">function</span>(d0) <span class="fu">c</span>(<span class="st">`</span><span class="at">n = 50</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">p_delta</span>(s50, d0), <span class="st">`</span><span class="at">n = 150</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">p_delta</span>(s150, d0))) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        Tragedy (delta = -0.3) Craft (delta = 0) ADT (delta = 0.3)
+n = 50                   0.001             0.054             0.660
+n = 150                  0.000             0.000             0.316</code></pre>
+</div>
+</div>
+<p>At <em>n</em> = 50 the data reject the tragedy account’s value but cannot separate zero from 0.3. At <em>n</em> = 150 zero is rejected and 0.3 is not. The frequentist route <strong>falsifies</strong> values that are incompatible with the data; it does not quantify how much the data support one surviving value over another. For range predictions (“at least 0.2”), use minimum-effect and equivalence tests (Lakens et al., 2018; <a href="./scene-3.html">Scene 3</a>).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="What each framework lets you say">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What each framework lets you say
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Frequentist:</strong> “The data are incompatible with the tragedy account’s effect of −0.3 (<em>p</em> &lt; .001) and compatible with both zero and 0.3 (<em>n</em> = 50).”</li>
+<li><strong>Bayesian:</strong> “The data were about 5 times more likely under the ADT account than under no effect, and 8 times more likely under no effect than under the tragedy account.”</li>
+</ul>
+</div>
+</div>
+<p><strong>Theory-building takeaway.</strong> A Bayes factor is only as meaningful as the hypotheses it compares. Default priors test a default theory. To test <em>your</em> theory, write its prediction down as a prior, and report how conclusions change across defensible alternatives.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Your turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Make the ADT prior more confident: Normal(0.3, 0.05). Does its Bayes factor go up or down at <em>n</em> = 50? Why?</li>
+<li>Write a prior for a “large effect” account, Normal(0.8, 0.2). How does it fare at <em>n</em> = 150, where the observed <em>d</em> is 0.42?</li>
+</ol>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./scene-1.html" class="pagination-link" aria-label="Scene 1 · Same data, two questions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Scene 1 · Same data, two questions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./scene-3.html" class="pagination-link" aria-label="Scene 3 · When a theory predicts nothing">
+        <span class="nav-page-text">Scene 3 · When a theory predicts nothing</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Scene 2 · Priors as theories"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "A Bayes factor is a prediction contest"</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"R/helpers.R"</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(BayesFactor)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(patchwork)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.align =</span> <span class="st">"center"</span>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>So far ADT has made one directional prediction: more enjoyment after the rewarded ending. Theory building usually means weighing rival explanations of the same result, so here are two rivals. To compare the three, each account now states how big δ should be. All three are stylized (simplified for this demo, not summaries of a literature):</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>| Account | Mechanism | Prediction for δ |</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>|---|---|---|</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>| **ADT** | Viewers like the character who did good, so they enjoy seeing that character rewarded more than punished. | small and positive (around 0.3) |</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>| **Craft** | Enjoyment comes from how well the story is told, not from how it ends. | zero |</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>| **Tragedy** | Watching a good person suffer is moving, and moving stories are enjoyed more. | small and negative (around −0.3) |</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title="Predict first"}</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>Each account above makes a prediction about δ. Using the n = 50 data (observed *d* = 0.39), which account wins, and by roughly how much?</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>A theory that predicts "δ is around 0.3" can be written as a **prior on δ**. That prior implies which *t* statistics the study should produce. The Bayes factor is the ratio of how well two hypotheses predicted the *t* value we actually observed (Rouder et al., 2009; Gronau et al., 2020). Treating priors as part of the theory is the core of Vanpaemel's (2010) defense of Bayes factors for theory testing.</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Load the Study 1 data"</span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>s1_50  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/story_n50.csv"</span>)</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>s1_150 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/story_n150.csv"</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>s50  <span class="ot">&lt;-</span> <span class="fu">two_group</span>(s1_50)</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>s150 <span class="ot">&lt;-</span> <span class="fu">two_group</span>(s1_150)</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s2-priors</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>hyps <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Craft (δ = 0)"</span> <span class="ot">=</span> <span class="st">"null"</span>,</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ADT: Normal(0.3, 0.15)"</span> <span class="ot">=</span> prior_adt,</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Tragedy: Normal(−0.3, 0.15)"</span> <span class="ot">=</span> prior_tragedy,</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>  <span class="st">"JASP default: Cauchy(0, 0.707)"</span> <span class="ot">=</span> prior_default</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-predict</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 7</span></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Top: each account's prior on δ (the craft account is a spike at zero). Bottom: the t statistics each account predicts. The dotted vertical line is the observed t. The Bayes factor between two accounts is the ratio of their curve heights at that line."</span></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Craft (δ = 0)"</span> <span class="ot">=</span> pal[[<span class="st">"gray"</span>]],</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>          <span class="st">"ADT: Normal(0.3, 0.15)"</span> <span class="ot">=</span> pal[[<span class="st">"blue"</span>]],</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Tragedy: Normal(−0.3, 0.15)"</span> <span class="ot">=</span> pal[[<span class="st">"orange"</span>]],</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>          <span class="st">"JASP default: Cauchy(0, 0.707)"</span> <span class="ot">=</span> pal[[<span class="st">"aqua"</span>]])</span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a>short <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Craft"</span>, <span class="st">"ADT"</span>, <span class="st">"Tragedy"</span>, <span class="st">"Default"</span>)</span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>dl <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>pri <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">names</span>(hyps)[<span class="sc">-</span><span class="dv">1</span>], <span class="cf">function</span>(h) <span class="fu">data.frame</span>(<span class="at">x =</span> dl, <span class="at">y =</span> hyps[[h]](dl), <span class="at">h =</span> h)))</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>pri_lab <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">0.78</span>, <span class="sc">-</span><span class="fl">0.78</span>, <span class="fl">1.15</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">2.2</span>, <span class="fl">2.2</span>, <span class="fl">0.28</span>), <span class="at">h =</span> <span class="fu">names</span>(hyps)[<span class="sc">-</span><span class="dv">1</span>],</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>                      <span class="at">lab =</span> short[<span class="sc">-</span><span class="dv">1</span>])</span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a>pA <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pri, <span class="fu">aes</span>(x, y, <span class="at">color =</span> h)) <span class="sc">+</span></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="fl">3.1</span>), <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linewidth =</span> <span class="fl">1.3</span>,</span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>               <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.25</span>, <span class="st">"cm"</span>)), <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fl">3.38</span>, <span class="at">label =</span> <span class="st">"Craft"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">4.3</span>,</span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]], <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> pri_lab, <span class="fu">aes</span>(<span class="at">label =</span> lab), <span class="at">size =</span> <span class="fl">4.3</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> cols) <span class="sc">+</span></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">3.5</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.4</span>, <span class="fl">1.4</span>)) <span class="sc">+</span></span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Standardized effect δ"</span>, <span class="at">y =</span> <span class="st">"Prior density"</span>, <span class="at">title =</span> <span class="st">"What each account predicts about δ"</span>) <span class="sc">+</span></span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a>tg <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">8</span>, <span class="at">by =</span> <span class="fl">0.05</span>)</span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">list</span>(<span class="fu">list</span>(s50, <span class="st">"n = 50 per group"</span>), <span class="fu">list</span>(s150, <span class="st">"n = 150 per group"</span>)), <span class="cf">function</span>(z) {</span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">names</span>(hyps), <span class="cf">function</span>(h) <span class="fu">data.frame</span>(<span class="at">t =</span> tg, <span class="at">y =</span> <span class="fu">pred_t</span>(tg, z[[<span class="dv">1</span>]], hyps[[h]]), <span class="at">h =</span> h, <span class="at">n =</span> z[[<span class="dv">2</span>]])))</span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a>pred<span class="sc">$</span>n <span class="ot">&lt;-</span> <span class="fu">factor</span>(pred<span class="sc">$</span>n, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"n = 50 per group"</span>, <span class="st">"n = 150 per group"</span>))</span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">n =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"n = 50 per group"</span>, <span class="st">"n = 150 per group"</span>), <span class="at">levels =</span> <span class="fu">levels</span>(pred<span class="sc">$</span>n)),</span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t =</span> <span class="fu">c</span>(s50<span class="sc">$</span>t, s150<span class="sc">$</span>t))</span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a>pk <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">levels</span>(pred<span class="sc">$</span>n), <span class="at">each =</span> <span class="dv">4</span>), <span class="at">levels =</span> <span class="fu">levels</span>(pred<span class="sc">$</span>n)),</span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>  <span class="at">h =</span> <span class="fu">rep</span>(<span class="fu">names</span>(hyps), <span class="dv">2</span>), <span class="at">lab =</span> <span class="fu">rep</span>(short, <span class="dv">2</span>),</span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>  <span class="at">t =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.6</span>, <span class="fl">4.7</span>, <span class="sc">-</span><span class="fl">3.9</span>, <span class="fl">5.6</span>,  <span class="sc">-</span><span class="fl">1.6</span>, <span class="fl">5.9</span>, <span class="sc">-</span><span class="fl">4.4</span>, <span class="fl">6.1</span>),</span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.415</span>, <span class="fl">0.25</span>, <span class="fl">0.3</span>, <span class="fl">0.1</span>, <span class="fl">0.415</span>, <span class="fl">0.2</span>, <span class="fl">0.26</span>, <span class="fl">0.085</span>))</span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a>pB <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pred, <span class="fu">aes</span>(t, y, <span class="at">color =</span> h)) <span class="sc">+</span></span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">data =</span> obs, <span class="fu">aes</span>(<span class="at">xintercept =</span> t), <span class="at">linewidth =</span> <span class="fl">0.9</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> obs, <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> <span class="fl">0.49</span>, <span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"observed t = %.2f"</span>, t)),</span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">size =</span> <span class="fl">4.2</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]], <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> pk, <span class="fu">aes</span>(<span class="at">label =</span> lab), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">vjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>n) <span class="sc">+</span></span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> cols) <span class="sc">+</span></span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.51</span>)) <span class="sc">+</span></span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"t statistic"</span>, <span class="at">y =</span> <span class="st">"Predicted density"</span>, <span class="at">title =</span> <span class="st">"What each account predicts about the t statistic"</span>) <span class="sc">+</span></span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a>pA <span class="sc">/</span> pB</span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" title="How to read this figure"}</span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Top panel:** each account's prior on δ, its prediction about the true effect before seeing data. Normal(0.3, 0.15) means "centered at 0.3, with 95% of its weight between 0 and 0.6." The craft account puts all its weight on exactly zero (the arrow).</span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Bottom panels:** what each account predicts the study's *t* statistic will be. Imagine running the study thousands of times with true effects drawn from the account's prior, and recording each *t*. The curve is the distribution of those *t* values (the *prior predictive distribution*).</span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**The dotted vertical line** is the *t* we actually observed.</span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**The Bayes factor between any two accounts is the ratio of their curves' heights at that line.** At n = 50, the blue (ADT) curve is about five times higher than the gray (craft) curve there.</span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Compare the two panels.** The craft prediction does not change with sample size, but the other accounts' predictions move away from zero as *n* grows, because the same true effect produces larger *t* values in larger samples. Bigger studies make theories easier to tell apart.</span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s2-bf</span></span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>bf_table <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">list</span>(<span class="st">`</span><span class="at">n = 50</span><span class="st">`</span> <span class="ot">=</span> s50, <span class="st">`</span><span class="at">n = 150</span><span class="st">`</span> <span class="ot">=</span> s150), <span class="cf">function</span>(s)</span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sapply</span>(hyps[<span class="sc">-</span><span class="dv">1</span>], <span class="cf">function</span>(pr) <span class="fu">bf_vs_null</span>(s, pr)))</span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(bf_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ADT vs. null"</span>, <span class="st">"Tragedy vs. null"</span>, <span class="st">"Default vs. null"</span>)</span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(bf_table,</span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ADT vs. tragedy"</span> <span class="ot">=</span> bf_table[<span class="dv">1</span>, ] <span class="sc">/</span> bf_table[<span class="dv">2</span>, ],</span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ADT vs. default"</span> <span class="ot">=</span> bf_table[<span class="dv">1</span>, ] <span class="sc">/</span> bf_table[<span class="dv">3</span>, ]), <span class="dv">2</span>)</span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s2-check</span></span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a><span class="co"># Check our prediction-contest function against BayesFactor (the engine JASP uses)</span></span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">ours =</span> <span class="fu">bf_vs_null</span>(s50, prior_default),</span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>  <span class="at">BayesFactor =</span> <span class="fu">extractBF</span>(<span class="fu">bf_default</span>(s1_50))<span class="sc">$</span>bf)</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>Read the table as a contest against the craft account, which predicts δ = 0 (the null):</span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At *n* = 50, **ADT beats the null by about `r round(bf_table[1, 1])` to 1**, while the vague default alternative barely ties it (<span class="in">`r fmt_bf(bf_table[3, 1])`</span>). Same data, different verdicts, because the hypotheses made different predictions.</span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tragedy loses badly** (BF₁₀ ≈ <span class="in">`r sprintf("%.2f", bf_table[2, 1])`</span>): it predicted negative *t* values and the data came out positive. At *n* = 150 it looks slightly *less* bad against the null (`r sprintf("%.2f", bf_table[2, 2])`), only because the null is now failing too. Bayes factors are relative: they say which of two hypotheses predicted better, not whether either one is any good. At *n* = 150, tragedy loses to ADT by more than 1,000 to 1.</span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At *n* = 150, ADT is favored over the null by about <span class="in">`r round(bf_table[1, 2], -1)`</span> to 1, and over the default by about <span class="in">`r round(bf_table[1, 2] / bf_table[3, 2], 1)`</span> to 1.</span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>A precise theory sticks its neck out. When it is right, it earns more evidence than a vague one; when it is wrong, it loses more. Meehl (1967) argued that a theory earns corroboration only by making predictions precise enough to fail; the Bayes factor puts a number on that idea.</span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a><span class="fu">## How much does the prior width matter?</span></span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a>This recreates JASP's robustness check: the default hypothesis with Cauchy widths from 0.05 to 1.5.</span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-robust</span></span>
+<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4.2</span></span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Bayes factor for a Cauchy alternative as its width changes. Wider priors predict larger effects and are penalized when the observed effect is small."</span></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.05</span>, <span class="fl">1.5</span>, <span class="at">by =</span> <span class="fl">0.025</span>)</span>
+<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a>rob <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">data.frame</span>(r, <span class="at">bf =</span> <span class="fu">sapply</span>(r, <span class="cf">function</span>(w) <span class="fu">bf_vs_null</span>(s50,  <span class="cf">function</span>(x) <span class="fu">dcauchy</span>(x, <span class="dv">0</span>, w))), <span class="at">n =</span> <span class="st">"n = 50 per group"</span>),</span>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a>             <span class="fu">data.frame</span>(r, <span class="at">bf =</span> <span class="fu">sapply</span>(r, <span class="cf">function</span>(w) <span class="fu">bf_vs_null</span>(s150, <span class="cf">function</span>(x) <span class="fu">dcauchy</span>(x, <span class="dv">0</span>, w))), <span class="at">n =</span> <span class="st">"n = 150 per group"</span>))</span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>rl <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">split</span>(rob, rob<span class="sc">$</span>n), <span class="cf">function</span>(z) z[z<span class="sc">$</span>r <span class="sc">==</span> <span class="fl">1.5</span>, ]))</span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(rob, <span class="fu">aes</span>(r, bf, <span class="at">color =</span> n)) <span class="sc">+</span></span>
+<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>), <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linetype =</span> <span class="fu">c</span>(<span class="st">"solid"</span>, <span class="st">"dashed"</span>, <span class="st">"dashed"</span>), <span class="at">linewidth =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">/</span> <span class="dv">2</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> rl, <span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.8</span>, <span class="at">size =</span> <span class="fl">4.4</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.72</span>, <span class="at">y =</span> <span class="dv">150</span>, <span class="at">label =</span> <span class="st">"JASP default (0.707)"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">100</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">200</span>)) <span class="sc">+</span></span>
+<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"n = 50 per group"</span> <span class="ot">=</span> pal[[<span class="st">"blue"</span>]], <span class="st">"n = 150 per group"</span> <span class="ot">=</span> pal[[<span class="st">"aqua"</span>]])) <span class="sc">+</span></span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Cauchy prior width r"</span>, <span class="at">y =</span> <span class="st">"BF10 (log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" title="How to read this figure"}</span>
+<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Horizontal axis:** the width (scale) of the default Cauchy prior. Small widths say "expect small effects"; large widths say "expect large ones."</span>
+<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Vertical axis:** BF₁₀ on a log scale. The solid line at 1 means no preference; the dashed lines at 3 and 10 mark JASP's "moderate" and "strong" labels.</span>
+<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**The dotted vertical line** is JASP's default width (0.707).</span>
+<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**A flat curve** means the conclusion does not depend on the prior's width; **a sloped curve** means it does.</span>
+<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>At *n* = 50 every width gives weak evidence at best, and wide priors tip toward the null. At *n* = 150 every reasonable width favors an effect. **A prior sensitivity analysis is how you show readers which conclusions depend on your theory's specifics and which do not.**</span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a><span class="fu">## The frequentist counterpart: test the theory's value, not only zero</span></span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>A *p* value can test any hypothesized value, not only zero (Greenland et al., 2016). Testing each account's central prediction:</span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s2-freq</span></span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a>p_delta <span class="ot">&lt;-</span> <span class="cf">function</span>(s, d0) { <span class="co"># exact test of H0: delta = d0 via the noncentral t</span></span>
+<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a>  lo <span class="ot">&lt;-</span> <span class="fu">pt</span>(s<span class="sc">$</span>t, s<span class="sc">$</span>df, <span class="at">ncp =</span> d0 <span class="sc">*</span> <span class="fu">sqrt</span>(s<span class="sc">$</span>neff)); <span class="dv">2</span> <span class="sc">*</span> <span class="fu">min</span>(lo, <span class="dv">1</span> <span class="sc">-</span> lo)</span>
+<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">c</span>(<span class="st">`</span><span class="at">Tragedy (delta = -0.3)</span><span class="st">`</span> <span class="ot">=</span> <span class="sc">-</span><span class="fl">0.3</span>, <span class="st">`</span><span class="at">Craft (delta = 0)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">`</span><span class="at">ADT (delta = 0.3)</span><span class="st">`</span> <span class="ot">=</span> <span class="fl">0.3</span>),</span>
+<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a>       <span class="cf">function</span>(d0) <span class="fu">c</span>(<span class="st">`</span><span class="at">n = 50</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">p_delta</span>(s50, d0), <span class="st">`</span><span class="at">n = 150</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">p_delta</span>(s150, d0))) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a>At *n* = 50 the data reject the tragedy account's value but cannot separate zero from 0.3. At *n* = 150 zero is rejected and 0.3 is not. The frequentist route **falsifies** values that are incompatible with the data; it does not quantify how much the data support one surviving value over another. For range predictions ("at least 0.2"), use minimum-effect and equivalence tests (Lakens et al., 2018; <span class="co">[</span><span class="ot">Scene 3</span><span class="co">](scene-3.qmd)</span>).</span>
+<span id="cb11-200"><a href="#cb11-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="What each framework lets you say"}</span>
+<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Frequentist:** "The data are incompatible with the tragedy account's effect of −0.3 (*p* &lt; .001) and compatible with both zero and 0.3 (*n* = 50)."</span>
+<span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bayesian:** "The data were about <span class="in">`r round(bf_table[1, 1])`</span> times more likely under the ADT account than under no effect, and <span class="in">`r round(1 / bf_table[2, 1])`</span> times more likely under no effect than under the tragedy account."</span>
+<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a>**Theory-building takeaway.** A Bayes factor is only as meaningful as the hypotheses it compares. Default priors test a default theory. To test *your* theory, write its prediction down as a prior, and report how conclusions change across defensible alternatives.</span>
+<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning title="Your turn"}</span>
+<span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make the ADT prior more confident: Normal(0.3, 0.05). Does its Bayes factor go up or down at *n* = 50? Why?</span>
+<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Write a prior for a "large effect" account, Normal(0.8, 0.2). How does it fare at *n* = 150, where the observed *d* is 0.42?</span>
+<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

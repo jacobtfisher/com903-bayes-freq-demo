@@ -1,0 +1,68 @@
+---
+title: "Resources"
+subtitle: "JASP, further reading, and references"
+---
+
+## Doing the same in JASP
+
+| Result | JASP |
+|---|---|
+| *t*, *p*, 95% CI, Cohen's *d* | T-Tests → Independent Samples T-Test (`enjoyment` by `condition`); tick *Location parameter* and *Effect size* |
+| BF₁₀, prior and posterior for δ | T-Tests → Bayesian Independent Samples T-Test; *Prior and posterior*, *Additional info* |
+| Robustness check ([Scene 2](scene-2.qmd)) | same analysis → *Bayes factor robustness check* |
+| Informed priors ([Scene 2](scene-2.qmd)) | same analysis → *Prior* → *Informed* → Normal (location 0.3, scale 0.15) |
+| Equivalence test ([Scene 3](scene-3.qmd)) | Equivalence T-Tests module → Independent Samples; bounds ±0.3 (raw) |
+| Sequential updating ([Scene 4](scene-4.qmd)) | not a single menu; use the Bayesian t-test's *Sequential analysis* for one study |
+
+## Where to go next
+
+- **Lakens (2022), *Improving Your Statistical Inferences*** (free online), especially the chapters on *p* values, likelihoods, and [Bayesian statistics](https://lakens.github.io/statistical_inferences/04-bayes.html), which walk through common misconceptions about Bayes factors.
+- **Kristoffer Magnusson's interactive visualizations:** [Bayesian inference](https://rpsychologist.com/d3/bayes/) and [confidence intervals](https://rpsychologist.com/d3/ci/).
+- ***Bayes Rules!*** (Johnson, Ott, & Dogucu, 2022), free at [bayesrulesbook.com](https://www.bayesrulesbook.com/), for a full course in applied Bayesian modeling in R.
+- **[bayesEd](https://github.com/m-Py/bayesEd)** (Papenberg), an R package that visualizes the Bayesian *t*-test as a prediction contest; [Scene 2](scene-2.qmd) follows the same logic.
+- **Informative hypotheses** such as "enjoyment: rewarded > no consequence > punished" can be tested directly with Bayes factors (Hoijtink et al., 2019; R package `bain`).
+- **In communication:** Konijn et al. (2015) reanalyze media-violence and mediated-communication datasets with Bayes factors and argue this can reduce publication bias. Levine et al. (2008) critique NHST practice in quantitative communication research.
+
+## References
+
+Dienes, Z. (2014). Using Bayes to get the most out of non-significant results. *Frontiers in Psychology, 5*, 781. <https://doi.org/10.3389/fpsyg.2014.00781>
+
+de Heide, R., & Grünwald, P. D. (2021). Why optional stopping can be a problem for Bayesians. *Psychonomic Bulletin & Review, 28*(3), 795–812. <https://doi.org/10.3758/s13423-020-01803-x>
+
+Etz, A., & Vandekerckhove, J. (2018). Introduction to Bayesian inference for psychology. *Psychonomic Bulletin & Review, 25*(1), 5–34. <https://doi.org/10.3758/s13423-017-1262-3>
+
+Greenland, S., Senn, S. J., Rothman, K. J., Carlin, J. B., Poole, C., Goodman, S. N., & Altman, D. G. (2016). Statistical tests, *P* values, confidence intervals, and power: A guide to misinterpretations. *European Journal of Epidemiology, 31*(4), 337–350. <https://doi.org/10.1007/s10654-016-0149-3>
+
+Gronau, Q. F., Ly, A., & Wagenmakers, E.-J. (2020). Informed Bayesian *t*-tests. *The American Statistician, 74*(2), 137–143. <https://doi.org/10.1080/00031305.2018.1562983>
+
+Hoijtink, H., Mulder, J., van Lissa, C., & Gu, X. (2019). A tutorial on testing hypotheses using the Bayes factor. *Psychological Methods, 24*(5), 539–556. <https://doi.org/10.1037/met0000201>
+
+Johnson, A. A., Ott, M. Q., & Dogucu, M. (2022). *Bayes rules! An introduction to applied Bayesian modeling*. CRC Press. <https://www.bayesrulesbook.com/>
+
+Konijn, E. A., van de Schoot, R., Winter, S. D., & Ferguson, C. J. (2015). Possible solution to publication bias through Bayesian statistics, including proper null hypothesis testing. *Communication Methods and Measures, 9*(4), 280–302. <https://doi.org/10.1080/19312458.2015.1096332>
+
+Kruschke, J. K., & Liddell, T. M. (2018). The Bayesian New Statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a Bayesian perspective. *Psychonomic Bulletin & Review, 25*(1), 178–206. <https://doi.org/10.3758/s13423-016-1221-4>
+
+Lakens, D. (2022). *Improving your statistical inferences*. <https://lakens.github.io/statistical_inferences/>
+
+Lakens, D., McLatchie, N., Isager, P. M., Scheel, A. M., & Dienes, Z. (2020). Improving inferences about null effects with Bayes factors and equivalence tests. *The Journals of Gerontology: Series B, 75*(1), 45–57. <https://doi.org/10.1093/geronb/gby065>
+
+Lakens, D., Scheel, A. M., & Isager, P. M. (2018). Equivalence testing for psychological research: A tutorial. *Advances in Methods and Practices in Psychological Science, 1*(2), 259–269. <https://doi.org/10.1177/2515245918770963>
+
+Levine, T. R., Weber, R., Hullett, C., Park, H. S., & Lindsey, L. L. M. (2008). A critical assessment of null hypothesis significance testing in quantitative communication research. *Human Communication Research, 34*(2), 171–187. <https://doi.org/10.1111/j.1468-2958.2008.00317.x>
+
+Raney, A. A. (2004). Expanding disposition theory: Reconsidering character liking, moral evaluations, and enjoyment. *Communication Theory, 14*(4), 348–369. <https://doi.org/10.1111/j.1468-2885.2004.tb00319.x>
+
+Meehl, P. E. (1967). Theory-testing in psychology and physics: A methodological paradox. *Philosophy of Science, 34*(2), 103–115. <https://doi.org/10.1086/288135>
+
+Rohrer, J. M. (2018). Thinking clearly about correlations and causation: Graphical causal models for observational data. *Advances in Methods and Practices in Psychological Science, 1*(1), 27–42. <https://doi.org/10.1177/2515245917745629>
+
+Rouder, J. N. (2014). Optional stopping: No problem for Bayesians. *Psychonomic Bulletin & Review, 21*(2), 301–308. <https://doi.org/10.3758/s13423-014-0595-4>
+
+Rouder, J. N., Speckman, P. L., Sun, D., Morey, R. D., & Iverson, G. (2009). Bayesian *t* tests for accepting and rejecting the null hypothesis. *Psychonomic Bulletin & Review, 16*(2), 225–237. <https://doi.org/10.3758/PBR.16.2.225>
+
+Schönbrodt, F. D., Wagenmakers, E.-J., Zehetleitner, M., & Perugini, M. (2017). Sequential hypothesis testing with Bayes factors: Efficiently testing mean differences. *Psychological Methods, 22*(2), 322–339. <https://doi.org/10.1037/met0000061>
+
+Vanpaemel, W. (2010). Prior sensitivity in theory testing: An apologia for the Bayes factor. *Journal of Mathematical Psychology, 54*(6), 491–498. <https://doi.org/10.1016/j.jmp.2010.07.003>
+
+Wysocki, A. C., Lawson, K. M., & Rhemtulla, M. (2022). Statistical control requires causal justification. *Advances in Methods and Practices in Psychological Science, 5*(2). <https://doi.org/10.1177/25152459221095823>

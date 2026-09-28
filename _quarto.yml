@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: docs
+  # Only these files become pages; README.md, CLAUDE.md, data/README.md, and dev/ stay out of the site.
+  render:
+    - index.qmd
+    - scene-1.qmd
+    - scene-2.qmd
+    - scene-3.qmd
+    - scene-4.qmd
+    - scene-5.qmd
+    - scene-6.qmd
+    - wrap-up.qmd
+    - resources.qmd
+
+website:
+  title: "One Story, Two Inference Machines"
+  page-navigation: true   # the back / forward arrows at the bottom of each page
+  search: false
+  sidebar:
+    style: docked
+    contents:
+      - href: index.qmd
+        text: "Start here"
+      - scene-1.qmd
+      - scene-2.qmd
+      - scene-3.qmd
+      - scene-4.qmd
+      - scene-5.qmd
+      - scene-6.qmd
+      - wrap-up.qmd
+      - resources.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    code-tools: true
+    code-overflow: wrap
+    fig-width: 9
+    fig-height: 5
+    fig-dpi: 110
+    fontsize: 1.05em
+    linestretch: 1.5
+
+execute:
+  warning: false
+  message: false

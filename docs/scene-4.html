@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Scene 4 · Six labs – One Story, Two Inference Machines</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./scene-5.html" rel="next">
+<link href="./scene-3.html" rel="prev">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f131de9aa1b8104d26dcf3e9d08923a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scene-4.html">Scene 4 · Six labs</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">One Story, Two Inference Machines</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Start here</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 1 · Same data, two questions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 2 · Priors as theories</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 3 · When a theory predicts nothing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Scene 4 · Six labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 5 · Neither machine fixes the design</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./scene-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scene 6 · What each framework promises</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wrap-up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wrap-up</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Scene 4 · Six labs</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<p class="subtitle lead">How evidence accumulates</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled" title="Predict first">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Six labs ran Study 1. Two found <em>p</em> &lt; .05, three did not, and one estimate went the wrong direction. Did the effect replicate?</p>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>labs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/story_labs.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lab_stats <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">split</span>(labs, labs<span class="sc">$</span>lab), <span class="cf">function</span>(d) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">two_group</span>(d)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">lab =</span> d<span class="sc">$</span>lab[<span class="dv">1</span>], <span class="at">n =</span> s<span class="sc">$</span>n1, <span class="at">diff =</span> s<span class="sc">$</span>diff, <span class="at">se =</span> s<span class="sc">$</span>se, <span class="at">lo =</span> s<span class="sc">$</span>ci[<span class="dv">1</span>], <span class="at">hi =</span> s<span class="sc">$</span>ci[<span class="dv">2</span>], <span class="at">p =</span> s<span class="sc">$</span>p,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">bf10 =</span> <span class="fu">extractBF</span>(<span class="fu">bf_default</span>(d))<span class="sc">$</span>bf)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">transform</span>(lab_stats, <span class="at">diff =</span> <span class="fu">round</span>(diff, <span class="dv">2</span>), <span class="at">se =</span> <span class="fu">round</span>(se, <span class="dv">3</span>), <span class="at">lo =</span> <span class="fu">round</span>(lo, <span class="dv">2</span>), <span class="at">hi =</span> <span class="fu">round</span>(hi, <span class="dv">2</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">p =</span> <span class="fu">fmt_p</span>(p), <span class="at">bf10 =</span> <span class="fu">fmt_bf</span>(bf10)),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Lab"</span>, <span class="st">"n / group"</span>, <span class="st">"Diff"</span>, <span class="st">"SE"</span>, <span class="st">"95% CI lo"</span>, <span class="st">"95% CI hi"</span>, <span class="st">"p"</span>, <span class="st">"BF10"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Lab</th>
+<th style="text-align: right;">n / group</th>
+<th style="text-align: right;">Diff</th>
+<th style="text-align: right;">SE</th>
+<th style="text-align: right;">95% CI lo</th>
+<th style="text-align: right;">95% CI hi</th>
+<th style="text-align: left;">p</th>
+<th style="text-align: left;">BF10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.215</td>
+<td style="text-align: right;">-0.01</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: left;">.054</td>
+<td style="text-align: left;">1.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">0.279</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: left;">.035</td>
+<td style="text-align: left;">1.68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.243</td>
+<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">0.93</td>
+<td style="text-align: left;">.066</td>
+<td style="text-align: left;">0.91</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">0.277</td>
+<td style="text-align: right;">-0.25</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: left;">.284</td>
+<td style="text-align: left;">0.43</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.187</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.84</td>
+<td style="text-align: left;">.012</td>
+<td style="text-align: left;">3.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">-0.07</td>
+<td style="text-align: right;">0.265</td>
+<td style="text-align: right;">-0.59</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: left;">.802</td>
+<td style="text-align: left;">0.23</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Explainer: vote counting, fixed-effect meta-analysis, sequential updating">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explainer: vote counting, fixed-effect meta-analysis, sequential updating
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Vote counting:</strong> tallying how many studies were significant. It ignores effect sizes and precision, and with modest power it will often report “mixed results” for a real effect.</li>
+<li><strong>Fixed-effect meta-analysis:</strong> a weighted average of the study estimates, with weights of 1 / SE², so more precise studies count more. It assumes every lab estimates the same true effect. When labs’ true effects differ, a <strong>random-effects</strong> model estimates that variation too.</li>
+<li><strong>Sequential updating:</strong> with normal approximations, each lab’s posterior (a mean and an SD) becomes the prior for the next lab.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Counting significant results (“vote counting”) says 2 of 6. Combining the evidence says something else. Two ways to combine:</p>
+<ul>
+<li><strong>Fixed-effect meta-analysis (frequentist):</strong> weight each lab by 1 / SE² and average.</li>
+<li><strong>Sequential Bayesian updating:</strong> start from a prior, update with lab 1, and let <em>yesterday’s posterior be today’s prior</em> (Etz &amp; Vandekerckhove, 2018) for lab 2, and so on.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cumulate <span class="ot">&lt;-</span> <span class="cf">function</span>(prior_mean, prior_sd) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> prior_mean; s <span class="ot">&lt;-</span> prior_sd; out <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(lab_stats))) {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    u <span class="ot">&lt;-</span> <span class="fu">update_normal</span>(m, s, lab_stats<span class="sc">$</span>diff[k], lab_stats<span class="sc">$</span>se[k]); m <span class="ot">&lt;-</span> u[[<span class="st">"mean"</span>]]; s <span class="ot">&lt;-</span> u[[<span class="st">"sd"</span>]]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    out <span class="ot">&lt;-</span> <span class="fu">rbind</span>(out, <span class="fu">data.frame</span>(<span class="at">after_lab =</span> k, <span class="at">mean =</span> m, <span class="at">lo =</span> m <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> s, <span class="at">hi =</span> m <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> s,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">p_pos =</span> <span class="fu">pnorm</span>(<span class="dv">0</span>, m, s, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  out</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>fe <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(lab_stats)), <span class="cf">function</span>(k) {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> lab_stats<span class="sc">$</span>se[<span class="dv">1</span><span class="sc">:</span>k]<span class="sc">^</span><span class="dv">2</span>; m <span class="ot">&lt;-</span> <span class="fu">sum</span>(w <span class="sc">*</span> lab_stats<span class="sc">$</span>diff[<span class="dv">1</span><span class="sc">:</span>k]) <span class="sc">/</span> <span class="fu">sum</span>(w); se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">sum</span>(w))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">after_lab =</span> k, <span class="at">mean =</span> m, <span class="at">lo =</span> m <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> se, <span class="at">hi =</span> m <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> se, <span class="at">p =</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(m <span class="sc">/</span> se)))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>vague <span class="ot">&lt;-</span> <span class="fu">cumulate</span>(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>skept <span class="ot">&lt;-</span> <span class="fu">cumulate</span>(<span class="dv">0</span>, <span class="fl">0.25</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">data.frame</span>(</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">Method =</span> <span class="fu">c</span>(<span class="st">"Fixed-effect meta-analysis"</span>, <span class="st">"Bayes, vague prior N(0, 10)"</span>, <span class="st">"Bayes, skeptical prior N(0, 0.25)"</span>),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">Estimate =</span> <span class="fu">sprintf</span>(<span class="st">"%.3f"</span>, <span class="fu">c</span>(fe<span class="sc">$</span>mean[<span class="dv">6</span>], vague<span class="sc">$</span>mean[<span class="dv">6</span>], skept<span class="sc">$</span>mean[<span class="dv">6</span>])),</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">95% interval</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"[%.3f, %.3f]"</span>, <span class="fu">c</span>(fe<span class="sc">$</span>lo[<span class="dv">6</span>], vague<span class="sc">$</span>lo[<span class="dv">6</span>], skept<span class="sc">$</span>lo[<span class="dv">6</span>]), <span class="fu">c</span>(fe<span class="sc">$</span>hi[<span class="dv">6</span>], vague<span class="sc">$</span>hi[<span class="dv">6</span>], skept<span class="sc">$</span>hi[<span class="dv">6</span>])),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p or P(effect &gt; 0)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">ifelse</span>(fe<span class="sc">$</span>p[<span class="dv">6</span>] <span class="sc">&lt;</span> .<span class="dv">001</span>, <span class="st">"p &lt; .001"</span>, <span class="fu">sprintf</span>(<span class="st">"p = %s"</span>, <span class="fu">fmt_p</span>(fe<span class="sc">$</span>p[<span class="dv">6</span>]))), <span class="fu">sprintf</span>(<span class="st">"%.4f"</span>, vague<span class="sc">$</span>p_pos[<span class="dv">6</span>]), <span class="fu">sprintf</span>(<span class="st">"%.4f"</span>, skept<span class="sc">$</span>p_pos[<span class="dv">6</span>])),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">check.names =</span> <span class="cn">FALSE</span>), <span class="at">align =</span> <span class="st">"lccc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 12%">
+<col style="width: 20%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">95% interval</th>
+<th style="text-align: center;">p or P(effect &gt; 0)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Fixed-effect meta-analysis</td>
+<td style="text-align: center;">0.382</td>
+<td style="text-align: center;">[0.193, 0.571]</td>
+<td style="text-align: center;">p &lt; .001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bayes, vague prior N(0, 10)</td>
+<td style="text-align: center;">0.382</td>
+<td style="text-align: center;">[0.193, 0.571]</td>
+<td style="text-align: center;">1.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bayes, skeptical prior N(0, 0.25)</td>
+<td style="text-align: center;">0.332</td>
+<td style="text-align: center;">[0.156, 0.509]</td>
+<td style="text-align: center;">0.9999</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fp <span class="ot">&lt;-</span> lab_stats; fp<span class="sc">$</span>lab_f <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">paste</span>(<span class="st">"Lab"</span>, fp<span class="sc">$</span>lab), <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"Lab"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>), <span class="st">"Pooled"</span>)))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fp<span class="sc">$</span>sig <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(fp<span class="sc">$</span>p <span class="sc">&lt;</span> .<span class="dv">05</span>, <span class="st">"p &lt; .05"</span>, <span class="st">"p ≥ .05"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pool <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">lab_f =</span> <span class="fu">factor</span>(<span class="st">"Pooled"</span>, <span class="at">levels =</span> <span class="fu">levels</span>(fp<span class="sc">$</span>lab_f)), <span class="at">est =</span> fe<span class="sc">$</span>mean[<span class="dv">6</span>], <span class="at">lo =</span> fe<span class="sc">$</span>lo[<span class="dv">6</span>], <span class="at">hi =</span> fe<span class="sc">$</span>hi[<span class="dv">6</span>])</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>pF <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(fp, <span class="fu">aes</span>(<span class="at">y =</span> lab_f)) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linewidth =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> lo, <span class="at">xmax =</span> hi), <span class="at">height =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> diff, <span class="at">shape =</span> sig), <span class="at">size =</span> <span class="fl">3.6</span>, <span class="at">color =</span> pal[[<span class="st">"blue"</span>]], <span class="at">fill =</span> pal[[<span class="st">"blue"</span>]], <span class="at">stroke =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> hi, <span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"p = %s"</span>, <span class="fu">fmt_p</span>(p))), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.15</span>, <span class="at">size =</span> <span class="fl">3.8</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="at">data =</span> pool, <span class="fu">aes</span>(<span class="at">xmin =</span> lo, <span class="at">xmax =</span> hi), <span class="at">height =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">color =</span> pal[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> pool, <span class="fu">aes</span>(<span class="at">x =</span> est), <span class="at">shape =</span> <span class="dv">23</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">fill =</span> pal[[<span class="st">"ink"</span>]], <span class="at">color =</span> pal[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"p &lt; .05"</span> <span class="ot">=</span> <span class="dv">21</span>, <span class="st">"p ≥ .05"</span> <span class="ot">=</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.8</span>, <span class="fl">1.6</span>)) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Difference (scale points)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">title =</span> <span class="st">"Six labs, one pooled estimate"</span>) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>acc <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">transform</span>(fe[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">how =</span> <span class="st">"Fixed-effect meta-analysis"</span>, <span class="at">off =</span> <span class="sc">-</span><span class="fl">0.18</span>),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>             <span class="fu">transform</span>(vague[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">how =</span> <span class="st">"Bayes, vague prior"</span>, <span class="at">off =</span> <span class="dv">0</span>),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>             <span class="fu">transform</span>(skept[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">how =</span> <span class="st">"Bayes, skeptical prior"</span>, <span class="at">off =</span> <span class="fl">0.18</span>))</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>acc<span class="sc">$</span>how <span class="ot">&lt;-</span> <span class="fu">factor</span>(acc<span class="sc">$</span>how, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Fixed-effect meta-analysis"</span>, <span class="st">"Bayes, vague prior"</span>, <span class="st">"Bayes, skeptical prior"</span>))</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>accl <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">how =</span> <span class="fu">levels</span>(acc<span class="sc">$</span>how), <span class="at">x =</span> <span class="fl">0.45</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="fl">1.36</span>, <span class="fl">1.22</span>))</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>accl<span class="sc">$</span>how <span class="ot">&lt;-</span> <span class="fu">factor</span>(accl<span class="sc">$</span>how, <span class="at">levels =</span> <span class="fu">levels</span>(acc<span class="sc">$</span>how))</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>pC <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(acc, <span class="fu">aes</span>(after_lab <span class="sc">+</span> off, mean, <span class="at">color =</span> how)) <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linewidth =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.36</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.45</span>, <span class="at">y =</span> <span class="fl">1.08</span>, <span class="at">label =</span> <span class="st">"- - -  truth (0.36)"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]], <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">width =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> accl, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">label =</span> how), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Fixed-effect meta-analysis"</span> <span class="ot">=</span> pal[[<span class="st">"ink2"</span>]], <span class="st">"Bayes, vague prior"</span> <span class="ot">=</span> pal[[<span class="st">"blue"</span>]],</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Bayes, skeptical prior"</span> <span class="ot">=</span> pal[[<span class="st">"orange"</span>]])) <span class="sc">+</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.3</span>, <span class="fl">1.6</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">0.4</span>, <span class="fl">6.4</span>)) <span class="sc">+</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Labs combined so far"</span>, <span class="at">y =</span> <span class="st">"Combined estimate (points)"</span>, <span class="at">title =</span> <span class="st">"Evidence accumulates"</span>) <span class="sc">+</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>pF <span class="sc">+</span> pC <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">widths =</span> <span class="fu">c</span>(<span class="fl">1.1</span>, <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-labs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-labs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="scene-4_files/figure-html/fig-labs-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="990">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-labs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Left: each lab’s estimate and 95% CI; filled points are p &lt; .05, open points are not. The diamond is the fixed-effect pooled estimate. Right: the combined estimate after each lab, from a fixed-effect meta-analysis and from sequential Bayesian updating with a vague or skeptical prior.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled" title="How to read this figure">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to read this figure
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Left (a forest plot):</strong> each row is one lab’s estimated difference with its 95% CI. Filled dots reached <em>p</em> &lt; .05; open dots did not. The black diamond is the pooled estimate from all six labs.</li>
+<li>Most of the open-dot intervals include the pooled estimate: a nonsignificant lab is not evidence against the effect.</li>
+<li><strong>Right:</strong> the combined estimate as labs are added one at a time (1 = lab 1 alone; 6 = all six). Each color is one way of combining; the bars are 95% intervals. The dashed line is the true effect built into the simulation.</li>
+<li>The gray (meta-analysis) and blue (vague-prior Bayes) results are the same numbers. The orange (skeptical-prior) results start lower and move toward them as data accumulate.</li>
+</ol>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># One Bayes factor for all 610 participants (305 per group); reasonable here because the labs share one true effect</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bf_default</span>(labs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Bayes factor analysis
+--------------
+[1] Alt., r=0.707 : 128.726 ±0%
+
+Against denominator:
+  Null, mu1-mu2 = 0 
+---
+Bayes factor type: BFindepSample, JZS</code></pre>
+</div>
+</div>
+<p>With a vague prior, sequential Bayesian updating reproduces the fixed-effect meta-analysis to the third decimal. The skeptical prior starts lower and moves toward the others as labs accumulate: the prior’s weight shrinks as data grow (Etz &amp; Vandekerckhove, 2018, Example 4).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="What each framework lets you say">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What each framework lets you say
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Frequentist:</strong> “Pooling six labs, enjoyment was 0.38 points higher after the rewarded ending, 95% CI [0.19, 0.57].”</li>
+<li><strong>Bayesian:</strong> “After six labs, even a skeptic’s posterior probability that the effect is positive exceeds 99.9%.”</li>
+<li><strong>Neither:</strong> “Only two of six labs replicated the effect.” That sentence confuses the significance of each study with the evidence of all of them.</li>
+</ul>
+</div>
+</div>
+<p><strong>Theory-building takeaway.</strong> Theories are built across studies, not within one. Bayesian updating makes accumulation explicit, and meta-analysis does the same job with long-run guarantees. If labs differ in their true effects (the “for whom and where” question), the natural next step is a <strong>hierarchical model</strong> that estimates the variation itself.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Your turn">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your turn
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Drop lab 6 (the “failed” replication). How much does the pooled estimate move? What would a literature that only published labs 2 and 5 conclude?</li>
+<li>Use lab 1’s posterior as the prior for Study 1’s n = 150 data. Is that legitimate here? What would make it illegitimate?</li>
+</ol>
+</div>
+</div>
+
+
+<!-- -->
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./scene-3.html" class="pagination-link" aria-label="Scene 3 · When a theory predicts nothing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Scene 3 · When a theory predicts nothing</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./scene-5.html" class="pagination-link" aria-label="Scene 5 · Neither machine fixes the design">
+        <span class="nav-page-text">Scene 5 · Neither machine fixes the design</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Scene 4 · Six labs"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "How evidence accumulates"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"R/helpers.R"</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(BayesFactor)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(patchwork)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.align =</span> <span class="st">"center"</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title="Predict first"}</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>Six labs ran Study 1. Two found *p* &lt; .05, three did not, and one estimate went the wrong direction. Did the effect replicate?</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s4-labs</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>labs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/story_labs.csv"</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>lab_stats <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">split</span>(labs, labs<span class="sc">$</span>lab), <span class="cf">function</span>(d) {</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">two_group</span>(d)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">lab =</span> d<span class="sc">$</span>lab[<span class="dv">1</span>], <span class="at">n =</span> s<span class="sc">$</span>n1, <span class="at">diff =</span> s<span class="sc">$</span>diff, <span class="at">se =</span> s<span class="sc">$</span>se, <span class="at">lo =</span> s<span class="sc">$</span>ci[<span class="dv">1</span>], <span class="at">hi =</span> s<span class="sc">$</span>ci[<span class="dv">2</span>], <span class="at">p =</span> s<span class="sc">$</span>p,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>             <span class="at">bf10 =</span> <span class="fu">extractBF</span>(<span class="fu">bf_default</span>(d))<span class="sc">$</span>bf)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">transform</span>(lab_stats, <span class="at">diff =</span> <span class="fu">round</span>(diff, <span class="dv">2</span>), <span class="at">se =</span> <span class="fu">round</span>(se, <span class="dv">3</span>), <span class="at">lo =</span> <span class="fu">round</span>(lo, <span class="dv">2</span>), <span class="at">hi =</span> <span class="fu">round</span>(hi, <span class="dv">2</span>),</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>                       <span class="at">p =</span> <span class="fu">fmt_p</span>(p), <span class="at">bf10 =</span> <span class="fu">fmt_bf</span>(bf10)),</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Lab"</span>, <span class="st">"n / group"</span>, <span class="st">"Diff"</span>, <span class="st">"SE"</span>, <span class="st">"95% CI lo"</span>, <span class="st">"95% CI hi"</span>, <span class="st">"p"</span>, <span class="st">"BF10"</span>))</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true" title="Explainer: vote counting, fixed-effect meta-analysis, sequential updating"}</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Vote counting:** tallying how many studies were significant. It ignores effect sizes and precision, and with modest power it will often report "mixed results" for a real effect.</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fixed-effect meta-analysis:** a weighted average of the study estimates, with weights of 1 / SE², so more precise studies count more. It assumes every lab estimates the same true effect. When labs' true effects differ, a **random-effects** model estimates that variation too.</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sequential updating:** with normal approximations, each lab's posterior (a mean and an SD) becomes the prior for the next lab.</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>Counting significant results ("vote counting") says 2 of 6. Combining the evidence says something else. Two ways to combine:</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fixed-effect meta-analysis (frequentist):** weight each lab by 1 / SE² and average.</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sequential Bayesian updating:** start from a prior, update with lab 1, and let *yesterday's posterior be today's prior* (Etz &amp; Vandekerckhove, 2018) for lab 2, and so on.</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s4-accumulate</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>cumulate <span class="ot">&lt;-</span> <span class="cf">function</span>(prior_mean, prior_sd) {</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> prior_mean; s <span class="ot">&lt;-</span> prior_sd; out <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(lab_stats))) {</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>    u <span class="ot">&lt;-</span> <span class="fu">update_normal</span>(m, s, lab_stats<span class="sc">$</span>diff[k], lab_stats<span class="sc">$</span>se[k]); m <span class="ot">&lt;-</span> u[[<span class="st">"mean"</span>]]; s <span class="ot">&lt;-</span> u[[<span class="st">"sd"</span>]]</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>    out <span class="ot">&lt;-</span> <span class="fu">rbind</span>(out, <span class="fu">data.frame</span>(<span class="at">after_lab =</span> k, <span class="at">mean =</span> m, <span class="at">lo =</span> m <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> s, <span class="at">hi =</span> m <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> s,</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">p_pos =</span> <span class="fu">pnorm</span>(<span class="dv">0</span>, m, s, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)))</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  out</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>fe <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(lab_stats)), <span class="cf">function</span>(k) {</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> lab_stats<span class="sc">$</span>se[<span class="dv">1</span><span class="sc">:</span>k]<span class="sc">^</span><span class="dv">2</span>; m <span class="ot">&lt;-</span> <span class="fu">sum</span>(w <span class="sc">*</span> lab_stats<span class="sc">$</span>diff[<span class="dv">1</span><span class="sc">:</span>k]) <span class="sc">/</span> <span class="fu">sum</span>(w); se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">sum</span>(w))</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">after_lab =</span> k, <span class="at">mean =</span> m, <span class="at">lo =</span> m <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> se, <span class="at">hi =</span> m <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> se, <span class="at">p =</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(m <span class="sc">/</span> se)))</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>vague <span class="ot">&lt;-</span> <span class="fu">cumulate</span>(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>skept <span class="ot">&lt;-</span> <span class="fu">cumulate</span>(<span class="dv">0</span>, <span class="fl">0.25</span>)</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">data.frame</span>(</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>  <span class="at">Method =</span> <span class="fu">c</span>(<span class="st">"Fixed-effect meta-analysis"</span>, <span class="st">"Bayes, vague prior N(0, 10)"</span>, <span class="st">"Bayes, skeptical prior N(0, 0.25)"</span>),</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>  <span class="at">Estimate =</span> <span class="fu">sprintf</span>(<span class="st">"%.3f"</span>, <span class="fu">c</span>(fe<span class="sc">$</span>mean[<span class="dv">6</span>], vague<span class="sc">$</span>mean[<span class="dv">6</span>], skept<span class="sc">$</span>mean[<span class="dv">6</span>])),</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">95% interval</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"[%.3f, %.3f]"</span>, <span class="fu">c</span>(fe<span class="sc">$</span>lo[<span class="dv">6</span>], vague<span class="sc">$</span>lo[<span class="dv">6</span>], skept<span class="sc">$</span>lo[<span class="dv">6</span>]), <span class="fu">c</span>(fe<span class="sc">$</span>hi[<span class="dv">6</span>], vague<span class="sc">$</span>hi[<span class="dv">6</span>], skept<span class="sc">$</span>hi[<span class="dv">6</span>])),</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p or P(effect &gt; 0)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">ifelse</span>(fe<span class="sc">$</span>p[<span class="dv">6</span>] <span class="sc">&lt;</span> .<span class="dv">001</span>, <span class="st">"p &lt; .001"</span>, <span class="fu">sprintf</span>(<span class="st">"p = %s"</span>, <span class="fu">fmt_p</span>(fe<span class="sc">$</span>p[<span class="dv">6</span>]))), <span class="fu">sprintf</span>(<span class="st">"%.4f"</span>, vague<span class="sc">$</span>p_pos[<span class="dv">6</span>]), <span class="fu">sprintf</span>(<span class="st">"%.4f"</span>, skept<span class="sc">$</span>p_pos[<span class="dv">6</span>])),</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>  <span class="at">check.names =</span> <span class="cn">FALSE</span>), <span class="at">align =</span> <span class="st">"lccc"</span>)</span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-labs</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Left: each lab's estimate and 95% CI; filled points are p &lt; .05, open points are not. The diamond is the fixed-effect pooled estimate. Right: the combined estimate after each lab, from a fixed-effect meta-analysis and from sequential Bayesian updating with a vague or skeptical prior."</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>fp <span class="ot">&lt;-</span> lab_stats; fp<span class="sc">$</span>lab_f <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">paste</span>(<span class="st">"Lab"</span>, fp<span class="sc">$</span>lab), <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"Lab"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>), <span class="st">"Pooled"</span>)))</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>fp<span class="sc">$</span>sig <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(fp<span class="sc">$</span>p <span class="sc">&lt;</span> .<span class="dv">05</span>, <span class="st">"p &lt; .05"</span>, <span class="st">"p ≥ .05"</span>)</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>pool <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">lab_f =</span> <span class="fu">factor</span>(<span class="st">"Pooled"</span>, <span class="at">levels =</span> <span class="fu">levels</span>(fp<span class="sc">$</span>lab_f)), <span class="at">est =</span> fe<span class="sc">$</span>mean[<span class="dv">6</span>], <span class="at">lo =</span> fe<span class="sc">$</span>lo[<span class="dv">6</span>], <span class="at">hi =</span> fe<span class="sc">$</span>hi[<span class="dv">6</span>])</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>pF <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(fp, <span class="fu">aes</span>(<span class="at">y =</span> lab_f)) <span class="sc">+</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linewidth =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> lo, <span class="at">xmax =</span> hi), <span class="at">height =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> diff, <span class="at">shape =</span> sig), <span class="at">size =</span> <span class="fl">3.6</span>, <span class="at">color =</span> pal[[<span class="st">"blue"</span>]], <span class="at">fill =</span> pal[[<span class="st">"blue"</span>]], <span class="at">stroke =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> hi, <span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"p = %s"</span>, <span class="fu">fmt_p</span>(p))), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.15</span>, <span class="at">size =</span> <span class="fl">3.8</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="at">data =</span> pool, <span class="fu">aes</span>(<span class="at">xmin =</span> lo, <span class="at">xmax =</span> hi), <span class="at">height =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">color =</span> pal[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> pool, <span class="fu">aes</span>(<span class="at">x =</span> est), <span class="at">shape =</span> <span class="dv">23</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">fill =</span> pal[[<span class="st">"ink"</span>]], <span class="at">color =</span> pal[[<span class="st">"ink"</span>]]) <span class="sc">+</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"p &lt; .05"</span> <span class="ot">=</span> <span class="dv">21</span>, <span class="st">"p ≥ .05"</span> <span class="ot">=</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.8</span>, <span class="fl">1.6</span>)) <span class="sc">+</span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Difference (scale points)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">title =</span> <span class="st">"Six labs, one pooled estimate"</span>) <span class="sc">+</span></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>acc <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">transform</span>(fe[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">how =</span> <span class="st">"Fixed-effect meta-analysis"</span>, <span class="at">off =</span> <span class="sc">-</span><span class="fl">0.18</span>),</span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>             <span class="fu">transform</span>(vague[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">how =</span> <span class="st">"Bayes, vague prior"</span>, <span class="at">off =</span> <span class="dv">0</span>),</span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>             <span class="fu">transform</span>(skept[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">how =</span> <span class="st">"Bayes, skeptical prior"</span>, <span class="at">off =</span> <span class="fl">0.18</span>))</span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>acc<span class="sc">$</span>how <span class="ot">&lt;-</span> <span class="fu">factor</span>(acc<span class="sc">$</span>how, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Fixed-effect meta-analysis"</span>, <span class="st">"Bayes, vague prior"</span>, <span class="st">"Bayes, skeptical prior"</span>))</span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>accl <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">how =</span> <span class="fu">levels</span>(acc<span class="sc">$</span>how), <span class="at">x =</span> <span class="fl">0.45</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="fl">1.36</span>, <span class="fl">1.22</span>))</span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>accl<span class="sc">$</span>how <span class="ot">&lt;-</span> <span class="fu">factor</span>(accl<span class="sc">$</span>how, <span class="at">levels =</span> <span class="fu">levels</span>(acc<span class="sc">$</span>how))</span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>pC <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(acc, <span class="fu">aes</span>(after_lab <span class="sc">+</span> off, mean, <span class="at">color =</span> how)) <span class="sc">+</span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linewidth =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.36</span>, <span class="at">color =</span> pal[[<span class="st">"gray"</span>]], <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.45</span>, <span class="at">y =</span> <span class="fl">1.08</span>, <span class="at">label =</span> <span class="st">"- - -  truth (0.36)"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> pal[[<span class="st">"ink2"</span>]], <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">width =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> accl, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">label =</span> how), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Fixed-effect meta-analysis"</span> <span class="ot">=</span> pal[[<span class="st">"ink2"</span>]], <span class="st">"Bayes, vague prior"</span> <span class="ot">=</span> pal[[<span class="st">"blue"</span>]],</span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Bayes, skeptical prior"</span> <span class="ot">=</span> pal[[<span class="st">"orange"</span>]])) <span class="sc">+</span></span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.3</span>, <span class="fl">1.6</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">0.4</span>, <span class="fl">6.4</span>)) <span class="sc">+</span></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Labs combined so far"</span>, <span class="at">y =</span> <span class="st">"Combined estimate (points)"</span>, <span class="at">title =</span> <span class="st">"Evidence accumulates"</span>) <span class="sc">+</span></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_demo</span>()</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>pF <span class="sc">+</span> pC <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">widths =</span> <span class="fu">c</span>(<span class="fl">1.1</span>, <span class="dv">1</span>))</span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" title="How to read this figure"}</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Left (a forest plot):** each row is one lab's estimated difference with its 95% CI. Filled dots reached *p* &lt; .05; open dots did not. The black diamond is the pooled estimate from all six labs.</span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Most of the open-dot intervals include the pooled estimate: a nonsignificant lab is not evidence against the effect.</span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Right:** the combined estimate as labs are added one at a time (1 = lab 1 alone; 6 = all six). Each color is one way of combining; the bars are 95% intervals. The dashed line is the true effect built into the simulation.</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>The gray (meta-analysis) and blue (vague-prior Bayes) results are the same numbers. The orange (skeptical-prior) results start lower and move toward them as data accumulate.</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: s4-pooled-bf</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a><span class="co"># One Bayes factor for all 610 participants (305 per group); reasonable here because the labs share one true effect</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a><span class="fu">bf_default</span>(labs)</span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>With a vague prior, sequential Bayesian updating reproduces the fixed-effect meta-analysis to the third decimal. The skeptical prior starts lower and moves toward the others as labs accumulate: the prior's weight shrinks as data grow (Etz &amp; Vandekerckhove, 2018, Example 4).</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="What each framework lets you say"}</span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Frequentist:** "Pooling six labs, enjoyment was <span class="in">`r sprintf("%.2f", fe$mean[6])`</span> points higher after the rewarded ending, 95% CI <span class="co">[</span><span class="ot">`r sprintf("%.2f", fe$lo[6])`, `r sprintf("%.2f", fe$hi[6])`</span><span class="co">]</span>."</span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bayesian:** "After six labs, even a skeptic's posterior probability that the effect is positive exceeds <span class="in">`r if (skept$p_pos[6] &gt; .999) "99.9" else sprintf("%.1f", 100 * skept$p_pos[6])`</span>%."</span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Neither:** "Only two of six labs replicated the effect." That sentence confuses the significance of each study with the evidence of all of them.</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>**Theory-building takeaway.** Theories are built across studies, not within one. Bayesian updating makes accumulation explicit, and meta-analysis does the same job with long-run guarantees. If labs differ in their true effects (the "for whom and where" question), the natural next step is a **hierarchical model** that estimates the variation itself.</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning title="Your turn"}</span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Drop lab 6 (the "failed" replication). How much does the pooled estimate move? What would a literature that only published labs 2 and 5 conclude?</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use lab 1's posterior as the prior for Study 1's n = 150 data. Is that legitimate here? What would make it illegitimate?</span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

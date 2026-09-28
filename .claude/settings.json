@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make preview)",
+      "Bash(make render)",
+      "Bash(make check)",
+      "Bash(quarto render:*)",
+      "Bash(Rscript R/check_numbers.R)",
+      "Bash(Rscript -e:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  }
+}
