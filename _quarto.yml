@@ -12,6 +12,9 @@ project:
     - scene-6.qmd
     - wrap-up.qmd
     - resources.qmd
+  # Instructor slide deck: copied into docs/slides/ on render, never linked from the site.
+  resources:
+    - slides/
 
 website:
   title: "One Story, Two Inference Machines"

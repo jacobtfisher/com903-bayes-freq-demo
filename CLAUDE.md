@@ -27,6 +27,7 @@ Run `make check` after any change to `R/`, `data/`, or a statistical claim in th
 - `R/simulate_data.R`: documents every data-generating process and rebuilds Studies 2–4 and the Scene 6 simulation summary.
 - `R/check_numbers.R`: reference values the prose depends on.
 - `data/`: CSVs plus a codebook (`data/README.md`).
+- `slides/session-4.html`: Jacob's instructor slide deck (self-contained revealjs, speaker notes embedded). Published unlinked at `/slides/session-4.html` via `resources:` in `_quarto.yml`; nothing in the site links to it. Source lives in OneDrive at `COM903_F26/slides/4_inference-identification/`; to update, re-render there and copy the HTML over both `slides/session-4.html` and `docs/slides/session-4.html`.
 
 ## Guardrails
 
